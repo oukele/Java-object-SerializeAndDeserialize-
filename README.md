@@ -16,15 +16,17 @@
     把得到的字节序列写到一个目标输出流中。
     
 　　java.io.ObjectInputStream代表对象输入流，它的readObject()方法从一个源输入流中读取字节序列，再把它们反序列化为一个对象，并将其返回。
-　　只有实现了Serializable和Externalizable接口的类的对象才能被序列化。Externalizable接口继承自 Serializable接口，实现Externalizable接口的类完全由    自身来控制序列化的行为,
-
+　　只有实现了Serializable和Externalizable接口的类的对象才能被序列化。Externalizable接口继承自 Serializable接口，
+    实现Externalizable接口的类完全由自身来控制序列化的行为,
 　　而仅实现Serializable接口的类可以 采用默认的序列化方式 。
 ~~~
 
+~~~
  对象序列化包括如下步骤：　
-   　1） 创建一个对象输出流，它可以包装一个其他类型的目标输出流，如文件输出流；
-　　2） 通过对象输出流的writeObject()方法写对象。
+   　1、创建一个对象输出流，它可以包装一个其他类型的目标输出流，如文件输出流；
+　　 2、通过对象输出流的writeObject()方法写对象。
 
  对象反序列化的步骤如下：
-　　1） 创建一个对象输入流，它可以包装一个其他类型的源输入流，如文件输入流；
-　　2） 通过对象输入流的readObject()方法读取对象。
+　　1、创建一个对象输入流，它可以包装一个其他类型的源输入流，如文件输入流；
+　　2、通过对象输入流的readObject()方法读取对象。
+~~~
